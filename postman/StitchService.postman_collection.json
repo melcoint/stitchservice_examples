@@ -161,7 +161,7 @@
 										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
 										"exec": [
 											"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
-											"pm.collectionVariables.set(\"SVG_PNG_URL\",base64Svg);"
+											"pm.collectionVariables.set(\"SVG_BASE64\",base64Svg);"
 										],
 										"type": "text/javascript",
 										"packages": {},
