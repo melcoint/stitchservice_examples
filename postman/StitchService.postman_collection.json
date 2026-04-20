@@ -12,120 +12,113 @@
 					"name": "Base64Workflow",
 					"item": [
 						{
-							"name": "SvgWorkflow",
-							"item": [
+							"name": "Step1",
+							"event": [
 								{
-									"name": "Step1",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
-												"exec": [
-													"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
-													"pm.collectionVariables.set(\"SVG_PNG_BASE64\",base64Svg);"
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "9aaf3a60-396a-4882-8172-04897c166481",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										}
-									],
-									"id": "a31ae100-fd13-438d-8eae-8c05f4875999",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "x-api-key",
-												"value": "{{STITCH_SERVICE_APIKEY}}",
-												"type": "text"
-											}
+									"listen": "test",
+									"script": {
+										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
+										"exec": [
+											"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
+											"pm.collectionVariables.set(\"SVG_PNG_BASE64\",base64Svg);"
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_BASE64}}\",\r\n        \"file_name\":\"basketball club.png\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
-									},
-									"response": []
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								},
 								{
-									"name": "Step2",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "9aaf3a60-396a-4882-8172-04897c166481",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										}
-									],
-									"id": "df80d77e-da42-495e-b496-e69f7a542f21",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "x-api-key",
-												"value": "{{STITCH_SERVICE_APIKEY}}",
-												"type": "text"
-											}
+									"listen": "prerequest",
+									"script": {
+										"id": "9aaf3a60-396a-4882-8172-04897c166481",
+										"exec": [
+											""
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_BASE64}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
-									},
-									"response": []
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								}
 							],
-							"id": "c8e444c2-925d-4f7d-896d-b4a62fb52f9f",
-							"description": "Example of converting supported to Melco annotated svg then convert to stitch or rendering format. This is the recommended workflow to apply any LLM/AI models to improve svg quality."
+							"id": "a31ae100-fd13-438d-8eae-8c05f4875999",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{STITCH_SERVICE_APIKEY}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{BASE64}}\",\r\n        \"file_name\":\"getinvolved.png\"\r\n    },\r\n    \"output_file_name\":\"getinvolved.svg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
+							},
+							"response": []
+						},
+						{
+							"name": "Step2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9aaf3a60-396a-4882-8172-04897c166481",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "df80d77e-da42-495e-b496-e69f7a542f21",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{STITCH_SERVICE_APIKEY}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_BASE64}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
+							},
+							"response": []
 						}
 					],
 					"id": "89e158d9-cc04-4c69-a243-98100f0befbf",
@@ -160,120 +153,113 @@
 					"name": "HttpUrlWorkflow",
 					"item": [
 						{
-							"name": "SvgWorkflow",
-							"item": [
+							"name": "Step1",
+							"event": [
 								{
-									"name": "Step1",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
-												"exec": [
-													"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
-													"pm.collectionVariables.set(\"SVG_PNG_URL\",base64Svg);"
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "9aaf3a60-396a-4882-8172-04897c166481",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										}
-									],
-									"id": "f4f95a4f-a3c3-4cf1-b142-b40995aed8bb",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "x-api-key",
-												"value": "{{STITCH_SERVICE_APIKEY}}",
-												"type": "text"
-											}
+									"listen": "test",
+									"script": {
+										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
+										"exec": [
+											"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
+											"pm.collectionVariables.set(\"SVG_PNG_URL\",base64Svg);"
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{PNG_URL}}\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
-									},
-									"response": []
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								},
 								{
-									"name": "Step2",
-									"event": [
-										{
-											"listen": "test",
-											"script": {
-												"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										},
-										{
-											"listen": "prerequest",
-											"script": {
-												"id": "9aaf3a60-396a-4882-8172-04897c166481",
-												"exec": [
-													""
-												],
-												"type": "text/javascript",
-												"packages": {},
-												"requests": {}
-											}
-										}
-									],
-									"id": "c4a8880a-fe45-4896-9acd-9226a5ac27e7",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "x-api-key",
-												"value": "{{STITCH_SERVICE_APIKEY}}",
-												"type": "text"
-											}
+									"listen": "prerequest",
+									"script": {
+										"id": "9aaf3a60-396a-4882-8172-04897c166481",
+										"exec": [
+											""
 										],
-										"body": {
-											"mode": "raw",
-											"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_URL}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
-									},
-									"response": []
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
 								}
 							],
-							"id": "076db80d-13ef-4ee2-bd78-25493c886f82",
-							"description": "Example of converting supported to Melco annotated svg then convert to stitch or rendering format. This is the recommended workflow to apply any LLM/AI models to improve svg quality."
+							"id": "f4f95a4f-a3c3-4cf1-b142-b40995aed8bb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{STITCH_SERVICE_APIKEY}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{PNG_URL}}\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
+							},
+							"response": []
+						},
+						{
+							"name": "Step2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "9aaf3a60-396a-4882-8172-04897c166481",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "c4a8880a-fe45-4896-9acd-9226a5ac27e7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-api-key",
+										"value": "{{STITCH_SERVICE_APIKEY}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_URL}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
+							},
+							"response": []
 						}
 					],
 					"id": "f7c14d6c-27f8-4f10-bdeb-9efe4dda65ab"
@@ -1368,7 +1354,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "033bb4c4-c655-45c6-9b39-78b985b7806d",
+						"id": "f70b6c7f-eb4c-4eac-a079-ee1935cd65ee",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -1381,16 +1367,13 @@
 							"    {\"name\":\"COLORS_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
 							"    {\"name\":\"RGBMATCH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
 							"    {\"name\":\"OVERLAP_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
-							"    \r",
 							"    {\"name\":\"DELETE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/starlight_solid.svg\"},\r",
 							"    {\"name\":\"HOLES_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/starlight_solid.svg\"},\r",
 							"    {\"name\":\"SEQ_TYPE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
 							"    {\"name\":\"TRAVEL_WALK_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},      \r",
 							"    {\"name\":\"SATIN_WIDTH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},      \r",
-							"    {\"name\":\"SINGLELINE_WIDTH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},      \r",
+							"    {\"name\":\"SINGLELINE_WIDTH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},      \r",
 							"    {\"name\":\"CURVE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Cactus.bmp\"},      \r",
-							"    \r",
-							"    \r",
 							"    {\"name\":\"THREAD_MATCH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/tigers.emf\"},\r",
 							"    {\"name\":\"STYLE_FILE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/earthday.bmp\"},\r",
 							"]\r",
@@ -1433,7 +1416,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "53af9995-66d5-4ee8-82c4-32ec11e7e703",
+						"id": "084c7358-4fc0-472d-bd75-ddc741785c0a",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
