@@ -729,7 +729,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/sort-colors\r\n\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"color_reduction_options\": {\r\n        \"override_colors\":{{SORT_COLORLIST}}  \r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{PNG_BASE64_STYLE_FILE}}\",\r\n    \"file_name\": \"style_file.png\"\r\n  },\r\n  \"output_file_name\": \"style_file.ofm\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/sort-colors\r\n\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"color_reduction_options\": {\r\n        \"override_colors\":{{SORT_COLORLIST}}  \r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{BASE64}}\",\r\n    \"file_name\": \"input.png\"\r\n  },\r\n  \"output_file_name\": \"output.ofm\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -789,7 +789,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG, JPG,JPEG,AI,EPS,SVG,SVGZ\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/define-overlap\r\nSupported Values for flatten_overlap: points 1 Inch=254\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"flatten_params\": {\r\n        \"enable_flatten\": true,\r\n        \"flatten_overlap\": 25.4\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"type\":\"base64\",\r\n    \"data\": \"{{SVG_OVERLAP_BASE64}}\",\r\n    \"file_name\": \"overlap.svg\"\r\n  },\r\n  \"output_file_name\": \"converted.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG, JPG,JPEG,AI,EPS,SVG,SVGZ\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/define-overlap\r\nSupported Values for flatten_overlap: points 1 Inch=254\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"flatten_params\": {\r\n        \"enable_flatten\": true,\r\n        \"flatten_overlap\": 25.4\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"type\":\"base64\",\r\n    \"data\": \"{{OVERLAP_BASE64}}\",\r\n    \"file_name\": \"overlap.svg\"\r\n  },\r\n  \"output_file_name\": \"converted.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -849,7 +849,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/delete-holes-and-objects\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n             \"vector_filter_params\": {\r\n                \"min_area\": 25.4  //One Inch =254x254\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_DELETE_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/delete-holes-and-objects\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n             \"vector_filter_params\": {\r\n                \"min_area\": 25.4  //One Inch =254x254\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{DELETE_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -909,7 +909,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/delete-holes-and-objects\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n             \"flatten_params\": {\r\n                \"enable_flatten\": true\r\n            },\r\n            \"vector_filter_params\": {\r\n                \"min_hole_area\": 2500 //pt2\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_HOLES_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/delete-holes-and-objects\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n             \"flatten_params\": {\r\n                \"enable_flatten\": true\r\n            },\r\n            \"vector_filter_params\": {\r\n                \"min_hole_area\": 2500 //pt2\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{HOLES_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -969,7 +969,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/curve-smoothing\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"vector_filter_params\": {\r\n                \"curve_smoothing_factor\": 200\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_CURVE_BASE64}}\",\r\n        \"file_name\":\"input.png\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/curve-smoothing\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"vector_filter_params\": {\r\n                \"curve_smoothing_factor\": 200\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{CURVE_BASE64}}\",\r\n        \"file_name\":\"input.bmp\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1029,7 +1029,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/sew-sequence\r\nSupported Values :CenterOut, CustomEntryExit, LeftToRight, MinimizeTrims, None, RightToLeft\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n            \"auto_sequence_params\": {\r\n                \"sequence_type\": \"LeftToRight\"\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_SEQ_TYPE_BASE64}}\",\r\n        \"file_name\":\"input.png\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/sew-sequence\r\nSupported Values :CenterOut, CustomEntryExit, LeftToRight, MinimizeTrims, None, RightToLeft\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n            \"auto_sequence_params\": {\r\n                \"sequence_type\": \"LeftToRight\"\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SEQ_TYPE_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
