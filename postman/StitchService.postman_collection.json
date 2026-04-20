@@ -1368,7 +1368,7 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f30a5f46-eb56-4efa-868e-d36a5878e5af",
+						"id": "977c7619-0398-4501-9e9a-3992194bf28e",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
@@ -1376,14 +1376,13 @@
 							"let expAssets=[\r",
 							"    {\"name\":\"BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/getinvolved.png\"},\r",
 							"    {\"name\":\"BASE64_BG\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},\r",
-							"    {\"name\":\"TARGETSIZE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Cactus.bmp\"},\r",
+							"    {\"name\":\"IMAGESIZE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Cactus.bmp\"},\r",
 							"    {\"name\":\"ARTWORK_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/sun1.jpg\"},\r",
-							"    {\"name\":\"COLORS_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly\"},\r",
-							"\r",
-							"    {\"name\":\"OVERLAP_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},\r",
+							"    {\"name\":\"COLORS_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
+							"    {\"name\":\"OVERLAP_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/holly.svg\"},\r",
 							"    \r",
-							"    {\"name\":\"DELETE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},\r",
-							"    {\"name\":\"HOLES_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},\r",
+							"    {\"name\":\"DELETE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/starlight_solid.svg\"},\r",
+							"    {\"name\":\"HOLES_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/starlight_solid.svg\"},\r",
 							"    {\"name\":\"SEQ_TYPE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},\r",
 							"    {\"name\":\"TRAVEL_WALK_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},      \r",
 							"    {\"name\":\"SATIN_WIDTH_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/\"},      \r",
@@ -1433,7 +1432,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "86465e3d-cb99-419e-bb2e-082a5e276d25",
+						"id": "a1129d49-d86f-466d-8333-2d7b24db0661",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
