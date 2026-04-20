@@ -313,7 +313,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/image-size\r\n***************************************************************************/\r\n\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"image_options\": {\r\n        \"size_includes_image_margin\": false,\r\n        \"target_width\": 508\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{PNG_BASE64_TARGETSIZE}}\",\r\n    \"file_name\": \"target_size.png\"\r\n  },\r\n  \"output_file_name\": \"output.ofm\"\r\n}\r\n",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/image-size\r\n***************************************************************************/\r\n\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"image_options\": {\r\n        \"size_includes_image_margin\": false,\r\n        \"target_width\": 508\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{IMAGESIZE_BASE64}}\",\r\n    \"file_name\": \"Cactus.bmp\"\r\n  },\r\n  \"output_file_name\": \"Cactus.ofm\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -367,7 +367,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/image-size\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"image_options\": {\r\n        \"size_includes_image_margin\": false,\r\n        \"target_height\": 508\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{PNG_BASE64_TARGETSIZE}}\",\r\n    \"file_name\": \"target_size.png\"\r\n  },\r\n  \"output_file_name\": \"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/image-size\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"image_options\": {\r\n        \"size_includes_image_margin\": false,\r\n        \"target_height\": 508\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{IMAGESIZE_BASE64}}\",\r\n    \"file_name\": \"Cactus.bmp\"\r\n  },\r\n  \"output_file_name\": \"Cactus.ofm\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
