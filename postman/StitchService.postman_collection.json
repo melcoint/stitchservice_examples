@@ -196,7 +196,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{URL}}\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
+									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{URL}}\"\r\n    },\r\n    \"output_file_name\":\"getinvolved.svg\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -250,7 +250,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_URL}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
+									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_BASE64}}\",\r\n        \"file_name\":\"getinvolved.svg\"\r\n    },\r\n    \"output_file_name\":\"getinvolved.ofm\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
