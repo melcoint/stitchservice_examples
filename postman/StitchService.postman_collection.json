@@ -1368,13 +1368,13 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "4b40d52a-739b-482b-822c-25155ad434a5",
+						"id": "e7f11304-57f9-4645-98dc-55aa3aeee741",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
 							"let expAssets=[\r",
-							"    {\"name\":\"PNG_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/applicationsteam/testreadyfiles/png/72dpi/basketball club.png\"},\r",
+							"    {\"name\":\"PNG_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/postman/getinvolved.png\"},\r",
 							"    {\"name\":\"PNG_BASE64_BG\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/applicationsteam/testreadyfiles/png/72dpi/basketball club.png\"},\r",
 							"    {\"name\":\"SVG_OVERLAP_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/tests/overlap/overlap.svg\"},\r",
 							"    {\"name\":\"SVG_COLORS_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/tests/colors/colors.svg\"},\r",
@@ -1429,7 +1429,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "433c7f4c-dd9f-410a-b284-ac630f625eb6",
+						"id": "397fab80-2781-41b4-80a2-d77ef6ea82b5",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
