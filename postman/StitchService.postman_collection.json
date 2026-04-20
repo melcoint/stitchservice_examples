@@ -1089,7 +1089,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/generate-walk-stitches\r\nSupported Values : Value less than points to generate walk stitches\r\n\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n            \"auto_sequence_params\": {\r\n                \"generate_travel_walks\": true,\r\n                \"trim_group_length\": 20\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_TRAVEL_WALK_BASE64}}\",\r\n        \"file_name\":\"input.png\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/generate-walk-stitches\r\nSupported Values : Value less than points to generate walk stitches\r\n\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n            \"auto_sequence_params\": {\r\n                \"generate_travel_walks\": true,\r\n                \"trim_group_length\": 20\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{TRAVEL_WALK_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1149,7 +1149,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/stitch-type\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"auto_stitch_type_params\": {\r\n                \"satin_width\": 200\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_SATIN_WIDTH_BASE64}}\",\r\n        \"file_name\":\"input.png\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/stitch-type\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"auto_stitch_type_params\": {\r\n                \"satin_width\": 200\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SATIN_WIDTH_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1209,7 +1209,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/stitch-type\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"auto_stitch_type_params\": {\r\n                \"min_singleline_width\": 20,\r\n                \"use_singleline_width_threshold\": 5.0\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_SINGLELINE_WIDTH_BASE64}}\",\r\n        \"file_name\":\"input.png\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/stitch-type\r\n***************************************************************************/\r\n{\r\n    \"conversion_params\": {\r\n        \"auto_digitize_params\": {\r\n           \"auto_stitch_type_params\": {\r\n                \"min_singleline_width\": 20,\r\n                \"use_singleline_width_threshold\": 5.0\r\n            }\r\n        }\r\n    },\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SINGLELINE_WIDTH_BASE64}}\",\r\n        \"file_name\":\"input.svg\"\r\n    },\r\n    \"output_file_name\":\"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -1269,7 +1269,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/apply-styles\r\n\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n   \"style_list\": [\r\n      {\r\n        \"style_location\": \"https://qamelcocloud.blob.core.windows.net/stitchengine/styles/heavyweight_knits.json\" //any publicly accessible json path \r\n      }\r\n    ]\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{PNG_BASE64_STYLE_FILE}}\",\r\n    \"file_name\": \"style_file.png\"\r\n  },\r\n  \"output_file_name\": \"style_file.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/apply-styles\r\n\r\n***************************************************************************/\r\n{\r\n  \"conversion_params\": {\r\n   \"style_list\": [\r\n      {\r\n        \"style_location\": \"https://qamelcocloud.blob.core.windows.net/stitchengine/styles/heavyweight_knits.json\" //any publicly accessible json path \r\n      }\r\n    ]\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{STYLE_FILE_BASE64}}\",\r\n    \"file_name\": \"input.bmp\"\r\n  },\r\n  \"output_file_name\": \"output.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
