@@ -427,7 +427,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG, JPG\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/artwork-filter\r\nSupported Values for filter_type: \r\n0   = Clean  [Default]\r\n1   = Default\r\n2   = LineArt\r\n4   = Noisy\r\n***************************************************************************/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{PNG_BASE64}}\",\r\n        \"file_name\":\"basketball club.png\",  \r\n        \"filter_type\":1   //Any value from above list is supported \r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG, JPG\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/artwork-filter\r\nSupported Values for filter_type: \r\n0   = Clean  [Default]\r\n1   = Default\r\n2   = LineArt\r\n4   = Noisy\r\n***************************************************************************/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{ARTWORK_BASE64}}\",\r\n        \"file_name\":\"sun1.jpg\",  \r\n        \"filter_type\":1   //Any value from above list is supported \r\n    },\r\n    \"output_file_name\":\"sun1.svg\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
