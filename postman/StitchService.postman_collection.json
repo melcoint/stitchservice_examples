@@ -20,7 +20,7 @@
 										"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
 										"exec": [
 											"var base64Svg=CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(pm.response.text()));\r",
-											"pm.collectionVariables.set(\"SVG_PNG_BASE64\",base64Svg);"
+											"pm.collectionVariables.set(\"SVG_BASE64\",base64Svg);"
 										],
 										"type": "text/javascript",
 										"packages": {},
@@ -109,7 +109,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_PNG_BASE64}}\",\r\n        \"file_name\":\"basketball club.svg\"\r\n    },\r\n    \"output_file_name\":\"basketball club.ofm\"\r\n}",
+									"raw": "/*\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"base64\",\r\n        \"data\":\"{{SVG_BASE64}}\",\r\n        \"file_name\":\"getinvolved.svg\"\r\n    },\r\n    \"output_file_name\":\"getinvolved.ofm\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -196,7 +196,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{PNG_URL}}\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
+									"raw": "/*\r\nSupported Inputs formats: PNG,JPG,EPS,AI,SVG,SVGZ\r\nSupported output formats: PNG,JPG,OFM,DST,EXP\r\n*/\r\n{\r\n    \"design\":{\r\n        \"type\":\"url\",\r\n        \"url\":\"{{URL}}\"\r\n    },\r\n    \"output_file_name\":\"basketball club.svg\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1354,13 +1354,14 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "f70b6c7f-eb4c-4eac-a079-ee1935cd65ee",
+						"id": "00ba520f-3320-4f64-bb15-465de7216f2f",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
 							"let expAssets=[\r",
 							"    {\"name\":\"BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/getinvolved.png\"},\r",
+							"    {\"name\":\"URL\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/getinvolved.png\"},\r",
 							"    {\"name\":\"BG_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Get_Married.bmp\"},\r",
 							"    {\"name\":\"IMAGESIZE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Cactus.bmp\"},\r",
 							"    {\"name\":\"ARTWORK_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/sun1.jpg\"},\r",
@@ -1416,7 +1417,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "084c7358-4fc0-472d-bd75-ddc741785c0a",
+						"id": "faa88a6a-3c8f-4e5e-a7be-87b900534ad1",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
