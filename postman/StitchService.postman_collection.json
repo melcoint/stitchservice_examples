@@ -1368,14 +1368,15 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "e7f11304-57f9-4645-98dc-55aa3aeee741",
+						"id": "672b990f-c7f4-4e1e-919c-be981121a970",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
 						"exec": [
 							"let expAssets=[\r",
-							"    {\"name\":\"PNG_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/postman/getinvolved.png\"},\r",
-							"    {\"name\":\"PNG_BASE64_BG\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/applicationsteam/testreadyfiles/png/72dpi/basketball club.png\"},\r",
+							"    {\"name\":\"PNG_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/getinvolved.png\"},\r",
+							"    {\"name\":\"PNG_BASE64_BG\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/postman/Canada1.jpg\"},\r",
+							"    \r",
 							"    {\"name\":\"SVG_OVERLAP_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/tests/overlap/overlap.svg\"},\r",
 							"    {\"name\":\"SVG_COLORS_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/tests/colors/colors.svg\"},\r",
 							"    {\"name\":\"SVG_DELETE_BASE64\",\"url\":\"https://qamelcocloud.blob.core.windows.net/stitchengine/designs/digitization/tests/delete/delete.svg\"},\r",
@@ -1429,7 +1430,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "397fab80-2781-41b4-80a2-d77ef6ea82b5",
+						"id": "93268624-c5fb-44f9-babc-9a5b02fa9ff4",
 						"type": "text/javascript",
 						"packages": {},
 						"requests": {},
