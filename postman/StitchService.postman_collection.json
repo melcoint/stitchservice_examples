@@ -268,6 +268,66 @@
 					"name": "Features",
 					"item": [
 						{
+							"name": "Presets",
+							"item": [
+								{
+									"name": "Width Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"id": "570cb299-f70e-4c40-9b7a-fbd63e3ab077",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										},
+										{
+											"listen": "prerequest",
+											"script": {
+												"id": "9aaf3a60-396a-4882-8172-04897c166481",
+												"exec": [
+													""
+												],
+												"type": "text/javascript",
+												"packages": {},
+												"requests": {}
+											}
+										}
+									],
+									"id": "47f2f8d7-50fb-4cbd-9c47-ed26e1611920",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "x-api-key",
+												"value": "{{STITCH_SERVICE_APIKEY}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "/***************************************************************************\r\nSupported Design File Formats: PNG,JPG,JPEG,SVG,SVGZ,EPS,AI\r\nDocumentation: https://docs.melcocloud.com/articles/auto-digitizing/image-size\r\n***************************************************************************/\r\n\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"image_options\": {\r\n        \"size_includes_image_margin\": false,\r\n        \"target_width\": 508\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{IMAGESIZE_BASE64}}\",\r\n    \"file_name\": \"Cactus.bmp\"\r\n  },\r\n  \"output_file_name\": \"Cactus.ofm\"\r\n}\r\n",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{REST_ENDPOINT}}/fulfillment/convert_design"
+									},
+									"response": []
+								}
+							],
+							"id": "8e1a9bb0-3c8e-40be-bb5e-9fa3d946038f"
+						},
+						{
 							"name": "Image Size",
 							"item": [
 								{
