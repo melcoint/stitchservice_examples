@@ -271,7 +271,7 @@
 							"name": "Presets",
 							"item": [
 								{
-									"name": "Width Copy",
+									"name": "Presets",
 									"event": [
 										{
 											"listen": "test",
@@ -313,7 +313,7 @@
 										],
 										"body": {
 											"mode": "raw",
-											"raw": "/***************************************************************************\r\nDocumentation: TBD\r\nenable_color_reduction: Mirror of color_reduction_options.enable_color_reduction. Set false when the input already has a reasonable palette and you don't want the engine to reduce.\r\n\r\n***************************************************************************/\r\n\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"preset\":{\r\n            \"enable_color_reduction\":false,\r\n            \"filter_small_outlines\":false,\r\n            \"geometry\":{\r\n\r\n            },\r\n            \"sequence\":{\r\n\r\n            }\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{IMAGESIZE_BASE64}}\",\r\n    \"file_name\": \"Cactus.bmp\"\r\n  },\r\n  \"output_file_name\": \"Cactus.ofm\"\r\n}\r\n",
+											"raw": "/***************************************************************************\r\nDocumentation: TBD\r\nenable_color_reduction: set false when the input already has a reasonable palette and you don't want the engine to reduce.\r\nfilter_small_outlines : set false to keep small outlines                       \r\ngeometry\r\nsequence\r\n\r\n***************************************************************************/\r\n\r\n{\r\n  \"conversion_params\": {\r\n    \"auto_digitize_params\": {\r\n      \"preset\":{\r\n            \"enable_color_reduction\":false,\r\n            \"filter_small_outlines\":false,\r\n            \"geometry\":{\r\n\r\n            },\r\n            \"sequence\":{\r\n\r\n            }\r\n      }\r\n    }\r\n  },\r\n  \"design\": {\r\n    \"data\": \"{{IMAGESIZE_BASE64}}\",\r\n    \"file_name\": \"Cactus.bmp\"\r\n  },\r\n  \"output_file_name\": \"Cactus.ofm\"\r\n}\r\n",
 											"options": {
 												"raw": {
 													"language": "json"
